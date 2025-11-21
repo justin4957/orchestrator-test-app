@@ -55,7 +55,7 @@ source venv/bin/activate
 
 # Validate configuration
 echo "Validating configuration..."
-python -m src.cli validate-config --config "$CONFIG_FILE"
+python3 -m src.cli -c "$CONFIG_FILE" validate-config
 echo ""
 
 # Show current issues
@@ -82,4 +82,4 @@ echo ""
 echo "Press Ctrl+C to stop"
 echo ""
 
-python -m src.cli start --config "$CONFIG_FILE" --mode supervised
+python3 -m src.cli -c "$CONFIG_FILE" start --mode supervised
